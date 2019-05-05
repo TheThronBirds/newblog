@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: Blog
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /WEB-INF/jsp/
+  thymeleaf:
+    cache: false
+    enable-spring-el-compiler: false
+  resources:
+    static-locations: /static/
+  redis:
+    host: 106.12.129.193
+    port: 6379
+server:
+  port: 9090
+  servlet:
+    context-path: /web
+only:
+  luzejin:
+    dataSource:
+      jdbcUrl: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+      username: lzj
+      password: 950709
+      driverClassName: oracle.jdbc.OracleDriver
